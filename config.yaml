@@ -17,8 +17,8 @@ params:
   backgroundColor: "white"
   font: "Raleway" # should match the name on Google Fonts!
   highlight: true
-  highlightStyle: "solarized-dark"
-  highlightLanguages: ["python", "go", "scala"]
+  highlightStyle: "solarized-dark" #TODO:(sblack4) figure this out! I want dark theme <3
+  highlightLanguages: ["python", "go", "scala", "shell"]
 
 menu: 
   main:
@@ -47,7 +47,7 @@ menu:
     - url: "https://medium.com/@sblack4"
       name: "medium"
       weight: 6
-    - url: "blog/index.xml"
+    - url: "/blog/index.xml"
       name: "rss-square"
       weight: 7
 --- 

@@ -16,6 +16,17 @@
     
     
     <item>
+      <title>Deploying Gh Pages With Hugo</title>
+      <link>https://sblack4.github.io/blog/deploying-gh-pages-with-hugo/</link>
+      <pubDate>Fri, 30 Mar 2018 14:23:44 -0400</pubDate>
+      
+      <guid>https://sblack4.github.io/blog/deploying-gh-pages-with-hugo/</guid>
+      <description> Deploying GitHub Pages with Hugo Learn more about hugo as gohugo.io
+ From the root of my project (.../sblack.github.io)
+git clone -b master https://github.com/sblack4/sblack4.github.io.git public  </description>
+    </item>
+    
+    <item>
       <title>Hello World</title>
       <link>https://sblack4.github.io/blog/hello-world/</link>
       <pubDate>Fri, 30 Mar 2018 12:56:20 -0400</pubDate>
