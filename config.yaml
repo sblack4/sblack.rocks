@@ -1,0 +1,53 @@
+---
+baseURL: "https://sblack4.github.io"
+languageCode: "en-us"
+title: "S Black \n (dot) \n Rocks"
+canonifyurls: true
+theme: "minimal"
+permalinks:
+  post: /:year/:month/:title/
+
+params:
+  description: "Ramblings of Enthusiasm"
+  author: "Steven Black"
+  githubUsername: "sblack4"
+  SidebarRecentLimit: 5
+  accent: "red"
+  showBorder: true
+  backgroundColor: "white"
+  font: "Raleway" # should match the name on Google Fonts!
+  highlight: true
+  highlightStyle: "solarized-dark"
+  highlightLanguages: ["python", "go", "scala"]
+
+menu: 
+  main:
+    - url: "/"
+      name: "Home"
+      weight: 1
+    - url: "blog"
+      name: "blog"
+      weight: 2
+  icon: 
+    - url: "mailto:sblack.rocks@gmail.com"
+      name: "envelope-o"
+      weight: 1
+    - url: "https://github.com/sblack4"
+      name: "github"
+      weight: 2
+    - url: "https://stackoverflow.com/users/5568528/steven-black"
+      name: "stack-overflow"
+      weight: 3
+    - url: "https://twitter.com/Genseb7"
+      name: "twitter"
+      weight: 4
+    - url: "https://www.linkedin.com/in/steven-black/"
+      name: "linkedin"
+      weight: 5
+    - url: "https://medium.com/@sblack4"
+      name: "medium"
+      weight: 6
+    - url: "blog/index.xml"
+      name: "rss-square"
+      weight: 7
+--- 
