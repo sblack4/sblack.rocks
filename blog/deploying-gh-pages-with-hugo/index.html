@@ -42,7 +42,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script> 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script> 
 
     <script>hljs.initHighlightingOnLoad();</script>
 
@@ -117,7 +117,7 @@
                             
                                 <li class="navbar-icon"><a href="https://medium.com/@sblack4"><i class="fa fa-medium"></i></a></li>
                             
-                                <li class="navbar-icon"><a href="blog/index.xml"><i class="fa fa-rss-square"></i></a></li>
+                                <li class="navbar-icon"><a href="https://sblack4.github.io/blog/index.xml"><i class="fa fa-rss-square"></i></a></li>
                             
                         </ul>
                     
@@ -151,23 +151,48 @@
 
 <h1 id="deploying-github-pages-with-hugo">Deploying GitHub Pages with Hugo</h1>
 
-<p>Learn more about hugo as <a href="https://gohugo.io/">gohugo.io</a></p>
+<p>Learn more about hugo as <a href="https://gohugo.io/">gohugo.io</a>
+<br></p>
 
-<p><img src="https://sblack4.github.io/static/img/hugo-vs-code.PNG" alt="" /></p>
+<h2 id="create-a-hugo-site-https-gohugo-io-getting-started-quick-start">Create a <a href="https://gohugo.io/getting-started/quick-start/">Hugo site</a></h2>
 
+<p>Install Hugo (see <a href="https://chocolatey.org/">chocolatey</a>)</p>
 
-<figure >
-    
-        <img src="https://sblack4.github.io/static/img/hugo-vs-code.PNG" />
-    
-    
-</figure>
+<pre><code class="language-shell">choco install hugo -confirm
+</code></pre>
 
+<p><br></p>
+
+<h2 id="follow-directions-to-install-minimal-https-github-com-calintat-minimal">Follow Directions to install <a href="https://github.com/calintat/minimal">Minimal</a></h2>
+
+<pre><code class="language-shell">git submodule add https://github.com/calintat/minimal.git themes/minimal
+git submodule init
+git submodule update
+</code></pre>
+
+<p><br></p>
+
+<h2 id="set-up-github-pages">Set up GitHub Pages</h2>
+
+<p><img src="https://sblack4.github.io/img/hugo-vs-code.PNG" alt="" />
+<br>
+<br></p>
+
+<h3 id="checkout-dev-branch">Checkout <code>dev</code> branch</h3>
+
+<pre><code class="language-shell">git checkout -b dev
+</code></pre>
+
+<p><br></p>
+
+<h3 id="change-master-branch-to-sblack-github-io-public">Change <code>master</code> branch to <code>.../sblack.github.io/public</code></h3>
 
 <p>From the root of my project (<code>.../sblack.github.io</code>)</p>
 
-<pre><code class="language-sh"> git clone -b master https://github.com/sblack4/sblack4.github.io.git public
+<pre><code class="language-shell"> git clone -b master https://github.com/sblack4/sblack4.github.io.git public
 </code></pre>
+
+<p><br></p>
 </div>
 
     
