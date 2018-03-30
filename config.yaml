@@ -1,7 +1,7 @@
 ---
 baseURL: "https://sblack4.github.io"
 languageCode: "en-us"
-title: "S Black \n (dot) \n Rocks"
+title: "S Black (dot) Rocks"
 canonifyurls: true
 theme: "minimal"
 permalinks:
@@ -23,11 +23,14 @@ params:
 menu: 
   main:
     - url: "/"
-      name: "Home"
+      name: "home"
       weight: 1
-    - url: "blog"
+    - url: "/blog"
       name: "blog"
       weight: 2
+    - url: "/about"
+      name: "about"
+      weight: 3
   icon: 
     - url: "mailto:sblack.rocks@gmail.com"
       name: "envelope-o"

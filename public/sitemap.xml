@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://sblack4.github.io/_about/</loc>
+    <lastmod>2018-03-30T14:54:25-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sblack4.github.io/blog/deploying-gh-pages-with-hugo/</loc>
     <lastmod>2018-03-30T14:23:44-04:00</lastmod>
   </url>

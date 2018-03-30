@@ -16,6 +16,15 @@
     
     
     <item>
+      <title>About</title>
+      <link>https://sblack4.github.io/_about/</link>
+      <pubDate>Fri, 30 Mar 2018 14:54:25 -0400</pubDate>
+      
+      <guid>https://sblack4.github.io/_about/</guid>
+      <description> About </description>
+    </item>
+    
+    <item>
       <title>Deploying Gh Pages With Hugo</title>
       <link>https://sblack4.github.io/blog/deploying-gh-pages-with-hugo/</link>
       <pubDate>Fri, 30 Mar 2018 14:23:44 -0400</pubDate>
