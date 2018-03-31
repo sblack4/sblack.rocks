@@ -17,6 +17,6 @@ description: "about me!"
 </div>
 <br><br>
 
-## This is all made possible by my first lady
+## This is all made possible by my first lady <3
 ![](/img/my-first-lady.JPG)
 <br><br>
