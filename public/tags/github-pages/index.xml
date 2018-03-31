@@ -1,28 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>S Black (dot) Rocks</title>
-    <link>https://sblack4.github.io/</link>
-    <description>Recent content on S Black (dot) Rocks</description>
+    <title>Github Pages on S Black (dot) Rocks</title>
+    <link>https://sblack4.github.io/tags/github-pages/</link>
+    <description>Recent content in Github Pages on S Black (dot) Rocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 Mar 2018 13:27:57 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 31 Mar 2018 13:15:28 -0400</lastBuildDate>
     
-	<atom:link href="https://sblack4.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sblack4.github.io/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Oracle Moocs</title>
-      <link>https://sblack4.github.io/blog/oracle-moocs/</link>
-      <pubDate>Sat, 31 Mar 2018 13:27:57 -0400</pubDate>
-      
-      <guid>https://sblack4.github.io/blog/oracle-moocs/</guid>
-      <description>Oracle Moocs - Join me! Join me on Oracle&amp;rsquo;s Learning Library for a few moocs -
-
-Databases for Developers I loved this course! Chris Saxon has so much energy and enthusiasm for databases, it&amp;rsquo;s infectious. This is a very basic introduction to RDBS and is appropriate for anyone :) Chris also has a fantastic youtube channel - see the intro to the course here
-
-Introduction to PL/SQL See my GitHub repo for the course https://github.</description>
-    </item>
     
     <item>
       <title>My Old Site Sblack Dot Rocks</title>
@@ -32,15 +19,6 @@ Introduction to PL/SQL See my GitHub repo for the course https://github.</descri
       <guid>https://sblack4.github.io/blog/my-old-site-sblack-dot-rocks/</guid>
       <description>my old site, sblack.rocks is being retired My old static site, was really fun to build (and one of the last things I did in Typescript - which is a FANTASTIC language) but is way more complicated than managing a simple static site like this one, which I can write in Markdown!
 I&amp;rsquo;m going to keep it on the web, projects like that have nostaligic value. Like looking at old family photos it brings back warm memories and lets me know how much I&amp;rsquo;ve learned since then!</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://sblack4.github.io/about/</link>
-      <pubDate>Fri, 30 Mar 2018 14:54:25 -0400</pubDate>
-      
-      <guid>https://sblack4.github.io/about/</guid>
-      <description> Me I have a baby einstein We&amp;rsquo;re part of a little family  This is all made possible by my first lady &amp;lt;3 </description>
     </item>
     
     <item>
@@ -55,15 +33,6 @@ Follow Directions to install Minimal git submodule add https://github.com/calint
 Set up GitHub Pages Checkout dev branch git checkout -b dev  
 Change master branch to .../sblack.github.io/public From the root of my project (.../sblack.github.io)
 git clone -b master https://github.</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>https://sblack4.github.io/blog/hello-world/</link>
-      <pubDate>Fri, 30 Mar 2018 12:56:20 -0400</pubDate>
-      
-      <guid>https://sblack4.github.io/blog/hello-world/</guid>
-      <description> Hello World </description>
     </item>
     
   </channel>
