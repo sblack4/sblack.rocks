@@ -2,6 +2,8 @@
 title: "Deploying Gh Pages With Hugo"
 date: 2018-03-30T14:23:44-04:00
 draft: false
+description: "My favorite static-site generator"
+tags: ["hugo", "git", "github pages"]
 ---
 
 # Deploying GitHub Pages with Hugo

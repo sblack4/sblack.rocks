@@ -3,7 +3,7 @@ title: "My Old Site Sblack Dot Rocks"
 date: 2018-03-31T13:15:28-04:00
 draft: false
 description: "My old sblack.rocks site is being retired, here's where you can find it"
-description: ["blog", "gh-pages", "github pages"]
+tags: ["blog", "gh-pages", "github pages"]
 ---
 
 # my old site, sblack.rocks is being retired
