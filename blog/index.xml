@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on S Black (dot) Rocks</title>
+    <title>sblack dot rocks on S Black (dot) Rocks</title>
     <link>https://sblack4.github.io/blog/</link>
-    <description>Recent content in Blogs on S Black (dot) Rocks</description>
+    <description>Recent content in sblack dot rocks on S Black (dot) Rocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Mar 2018 14:23:44 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 30 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://sblack4.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My Old Site Sblack Dot Rocks</title>
+      <link>https://sblack4.github.io/blog/my-old-site-sblack-dot-rocks/</link>
+      <pubDate>Sat, 31 Mar 2018 13:15:28 -0400</pubDate>
+      
+      <guid>https://sblack4.github.io/blog/my-old-site-sblack-dot-rocks/</guid>
+      <description>my old site, sblack.rocks is being retired My old static site, was really fun to build (and one of the last things I did in Typescript - which is a FANTASTIC language) but is way more complicated than managing a simple static site like this one, which I can write in Markdown!
+I&amp;rsquo;m going to keep it on the web, projects like that have nostaligic value. Like looking at old family photos it brings back warm memories and lets me know how much I&amp;rsquo;ve learned since then!</description>
+    </item>
     
     <item>
       <title>Deploying Gh Pages With Hugo</title>
