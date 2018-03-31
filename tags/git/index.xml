@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on S Black (dot) Rocks</title>
+    <link>https://sblack4.github.io/tags/git/</link>
+    <description>Recent content in Git on S Black (dot) Rocks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Mar 2018 14:23:44 -0400</lastBuildDate>
+    
+	<atom:link href="https://sblack4.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deploying Gh Pages With Hugo</title>
+      <link>https://sblack4.github.io/blog/deploying-gh-pages-with-hugo/</link>
+      <pubDate>Fri, 30 Mar 2018 14:23:44 -0400</pubDate>
+      
+      <guid>https://sblack4.github.io/blog/deploying-gh-pages-with-hugo/</guid>
+      <description>Deploying GitHub Pages with Hugo Learn more about hugo as gohugo.io Create a Hugo site Install Hugo (see chocolatey)
+choco install hugo -confirm  
+Follow Directions to install Minimal git submodule add https://github.com/calintat/minimal.git themes/minimal git submodule init git submodule update  
+Set up GitHub Pages Checkout dev branch git checkout -b dev  
+Change master branch to .../sblack.github.io/public From the root of my project (.../sblack.github.io)
+git clone -b master https://github.</description>
+    </item>
+    
+  </channel>
+</rss>
