@@ -6,10 +6,19 @@
     <description>Recent content in Tags on S Black (dot) Rocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 Mar 2018 13:27:57 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 20 Apr 2018 11:52:09 -0700</lastBuildDate>
     
 	<atom:link href="https://sblack4.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bash</title>
+      <link>https://sblack4.github.io/tags/bash/</link>
+      <pubDate>Fri, 20 Apr 2018 11:52:09 -0700</pubDate>
+      
+      <guid>https://sblack4.github.io/tags/bash/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Blog</title>
@@ -26,6 +35,15 @@
       <pubDate>Sat, 31 Mar 2018 13:27:57 -0400</pubDate>
       
       <guid>https://sblack4.github.io/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debugging</title>
+      <link>https://sblack4.github.io/tags/debugging/</link>
+      <pubDate>Fri, 20 Apr 2018 11:52:09 -0700</pubDate>
+      
+      <guid>https://sblack4.github.io/tags/debugging/</guid>
       <description></description>
     </item>
     
@@ -134,6 +152,24 @@
       <pubDate>Sat, 31 Mar 2018 13:27:57 -0400</pubDate>
       
       <guid>https://sblack4.github.io/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vscode</title>
+      <link>https://sblack4.github.io/tags/vscode/</link>
+      <pubDate>Fri, 20 Apr 2018 11:52:09 -0700</pubDate>
+      
+      <guid>https://sblack4.github.io/tags/vscode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://sblack4.github.io/tags/windows/</link>
+      <pubDate>Fri, 20 Apr 2018 11:52:09 -0700</pubDate>
+      
+      <guid>https://sblack4.github.io/tags/windows/</guid>
       <description></description>
     </item>
     
