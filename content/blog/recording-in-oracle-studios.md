@@ -33,11 +33,14 @@ Our Demo was on Avocado inc (a ficticious company) with a sick logo by yours tru
 ![avacado-ing-icon](/img/avocados-logo.png)
 
 that was having trouble integrating their data to make it actionable. They leverage 
-[Oracle Event Hub](), 
-[Oracle Big Data Cloud](), 
-and [Oracle Analytics Cloud]()
+[Oracle Event Hub](https://cloud.oracle.com/event-hub),
+[Oracle Big Data Cloud](https://cloud.oracle.com/bigdata), 
+and [Oracle Analytics Cloud](https://cloud.oracle.com/en_US/oac)
+
+You can see it (as i develop it!) on github 
 
 [https://github.com/unofficialoraclecloudhub/streaming-data-analytics-demo](https://github.com/unofficialoraclecloudhub/streaming-data-analytics-demo)
+
 
 </br>
 
