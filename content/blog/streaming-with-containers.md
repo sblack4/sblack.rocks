@@ -12,11 +12,12 @@ As with all cool software, you can check it out on github. check out my samples 
 
 [https://github.com/sblack4/dockerfiles/tree/master/oracle-stream-analytics](ihttps://github.com/sblack4/dockerfiles/tree/master/oracle-stream-analytics)
 
-I'm going to trust you have some framiliarity with 
+I'm going to trust you have some familiarity with 
 shell 
 and 
 docker
-(as well as having acess to .
+(or access to 
+[containers in the cloud](https://cloud.oracle.com/container-classic)
 If so, this should be a cinch! 
 
 ## Running 
@@ -63,4 +64,4 @@ and now just clone
 locally! 
 
 
-[for help with a proxy issue see](https://askubuntu.com/questions/109673/how-to-use-apt-get-via-http-proxy-like-this)
+[see here for help with a proxy issue](https://askubuntu.com/questions/109673/how-to-use-apt-get-via-http-proxy-like-this)

@@ -20,7 +20,7 @@ The weather was a little chilly - but I do love exploring new places! There were
 
 ![traffic school is boring so don't speed :p](/img/slow-down.JPG)
 
-Including this sign and one with duke, the java mascont, on a stop-sign. 
+Including this sign and one with duke, the java mascot, on a stop-sign. 
 
 There was all kinds of editing equipment, cameras, and a server room! 
 
@@ -41,6 +41,8 @@ You can see it (as i develop it!) on github
 
 [https://github.com/unofficialoraclecloudhub/streaming-data-analytics-demo](https://github.com/unofficialoraclecloudhub/streaming-data-analytics-demo)
 
+and if you want even deploy on 
+[Oracle Cloud](https://cloud.oracle.com)
 
 </br>
 
