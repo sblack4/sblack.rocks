@@ -2,8 +2,8 @@
 title: "Streaming With Containers"
 date: 2018-04-19T22:13:09-07:00
 draft: true
-description: "blog post"
-tags: ["blog"]
+description: "Oracle Stream Analytics - visualize data flows"
+tags: ["spark", "osa", "Oracle Stream Analytics"]
 ---
 
 # Check out Oracle Stream Analytics, Built on Spark 
@@ -32,7 +32,7 @@ although lately I've been really digging
 Here's me installing 
 [docker](https://www.docker.com/)
  on the
-[windows-subshell-for-linux]() 
+[windows-subshell-for-linux](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) 
 what feels a lot like a super lightweight docker container mapped to your filesystem 
 
 ```sh

@@ -6,13 +6,15 @@ description: "Using the WSL and vscode to debug bash scripts on windows"
 tags: ["debugging", "bash", "vscode", "windows"]
 ---
 
-TODO:(sblack4) finish links when I get internet
-- I wrote this on an airplane bach from HQ
+- I wrote this on an airplane bach from HQ! I got a lot of practice 
+presenting, had fun with our team mates from Austin TX, 
+and saw how we were underutilizing docker and a few other 
+devops tools. 
 
 # Debugging Bash on Windows
 ## Using the WSL and vscode to debug bash scripts on windows
 
-[bash](#TODO:wikipedia on bash) 
+[bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) 
 (in this case the [windows subsystem for linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)), 
 [visual studio code](https://code.visualstudio.com), 
 [docker](https://www.docker.com/) 
