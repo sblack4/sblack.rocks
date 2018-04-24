@@ -16,4 +16,4 @@ cd src/public
 echo in $(pwd)
 git add . 
 git commit -m "travis $GIT_TAG"
-git f -q "https://sblack4:$GITHUB_TOKEN@github.com/sblack4/sblack4.github.io.git" master
+git -f -q "https://sblack4:$GITHUB_TOKEN@github.com/sblack4/sblack4.github.io.git" master
