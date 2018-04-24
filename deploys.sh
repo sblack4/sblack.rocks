@@ -5,7 +5,7 @@ YEAR=$(date +"%Y")
 MONTH=$(date +"%m")
 git config --global user.email "${GIT_EMAIL}"
 git config --global user.name "${GIT_NAME}"
-# export GIT_TAG=V2.$YEAR-$MONTH.$TRAVIS_BUILD_NUMBER
+GIT_TAG=V2.$YEAR-$MONTH.$TRAVIS_BUILD_NUMBER
 # git fetch --tags
 # msg="Tag Generated from TravisCI for build $TRAVIS_BUILD_NUMBER"
 # if git tag $GIT_TAG -a -m "$msg" 2>/dev/null; then
@@ -14,5 +14,6 @@ git config --global user.name "${GIT_NAME}"
 # ls -aR
 cd src/public
 echo in $(pwd)
-git push -f -q https://sblack4:$GITHUB_KEY@github.com/sblack4/sblack4.github.io-master master
-echo done
+git add . 
+git commit -m "travis $GIT_TAG"
+git f -q "https://sblack4:$GITHUB_TOKEN@github.com/sblack4/sblack4.github.io.git" master
