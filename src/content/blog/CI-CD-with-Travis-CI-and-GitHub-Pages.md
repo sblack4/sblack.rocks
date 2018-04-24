@@ -9,7 +9,7 @@ tags: ["blog"]
 # CI/CD With Travis CI and GitHub Pages
 
 ## About 
-Devops is 
+Devops is pretty 
 
 
 ## References 
