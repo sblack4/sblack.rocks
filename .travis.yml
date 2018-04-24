@@ -26,6 +26,16 @@ deploy:
   on:
     repo: sblack4/sblack4.github.io
     branch: dev
+  provider: pages
+  skip_cleanup: true
+  verbose: true
+  local_dir: src/public
+  keep-history: true
+  target-branch: master
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    repo: sblack4/sblack4.github.io
+    branch: master
 
 after_deploy:
   - ./deploys.sh
