@@ -13,12 +13,12 @@ script:
   - chmod +x bin/hugo
   - cd src
   - ../bin/hugo
+  - cd public 
 
 # Deploy to GitHub pages
 deploy:
   provider: pages
   skip_cleanup: true
   verbose: true
-  local-dir: public
   target-branch: master
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
