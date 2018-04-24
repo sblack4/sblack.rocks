@@ -3,6 +3,7 @@
 #   apt:
 #     packages:
 #       - python-pygments
+language: go
 
 # Clean and don't fail
 install:
@@ -12,8 +13,7 @@ install:
 script:
   - chmod +x bin/hugo
   - cd src
-  - ../bin/hugo
-  - cd public 
+  - ../bin/hugo && cd ..
 
 # Deploy to GitHub pages
 deploy:
@@ -21,8 +21,11 @@ deploy:
   skip_cleanup: true
   verbose: true
   keep-history: true
-  target-branch: master
+  target-branch: dev
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   on:
     repo: sblack4.github.io
-    branch: master
+    branch: dev
+
+after_deploy:
+  script: 
