@@ -5,7 +5,6 @@ YEAR=$(date +"%Y")
 MONTH=$(date +"%m")
 git config --global user.email "${GIT_EMAIL}"
 git config --global user.name "${GIT_NAME}"
-git remote set-url origin https://${GITHUB_TOKEN}@github.com/sblack4/sblack4.github.io.git
 # export GIT_TAG=V2.$YEAR-$MONTH.$TRAVIS_BUILD_NUMBER
 # git fetch --tags
 # msg="Tag Generated from TravisCI for build $TRAVIS_BUILD_NUMBER"
@@ -15,5 +14,5 @@ git remote set-url origin https://${GITHUB_TOKEN}@github.com/sblack4/sblack4.git
 # ls -aR
 cd src/public
 echo in $(pwd)
-git push origin master 
+git push -f -q https://sblack4:$GITHUB_KEY@github.com/sblack4/sblack4.github.io-master master
 echo done
