@@ -1,8 +1,8 @@
 # Install the apt prerequisites
-addons:
-  apt:
-    packages:
-      - python-pygments
+# addons:
+#   apt:
+#     packages:
+#       - python-pygments
 
 # Clean and don't fail
 install:
@@ -11,7 +11,7 @@ install:
 # Build the website
 script:
   - cd src
-  - ../binaries/hugo --theme=ghoust
+  - ../binaries/hugo
 
 # Deploy to GitHub pages
 deploy:
