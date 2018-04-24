@@ -28,4 +28,5 @@ deploy:
     branch: dev
 
 after_deploy:
-  script: sh deploys.sh
+  script: 
+  - sh deploys.sh
