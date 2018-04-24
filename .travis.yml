@@ -22,7 +22,3 @@ deploy:
   local-dir: public
   target-branch: master
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  branches:
-    only:
-    - dev
-    - master
