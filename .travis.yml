@@ -20,6 +20,7 @@ deploy:
   provider: pages
   skip_cleanup: true
   verbose: true
+  keep-history: true
   target-branch: master
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   on:
