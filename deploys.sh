@@ -14,4 +14,6 @@ git config --global push.default simple
 # git push origin master && git push origin master --tags
 # ls -aR
 cd src/public
+echo in ${pwd}
 git push origin master 
+echo done
