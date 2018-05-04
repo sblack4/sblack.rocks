@@ -2,7 +2,7 @@
 title: "Graphql Oracledb Stand Up Friday Talk"
 date: 2018-05-04T14:25:27-04:00
 draft: false
-description: "blog post"
+description: "Steven talks about code"
 tags: ["oracle", "developer", "graphql", "devtalk"]
 ---
 
