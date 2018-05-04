@@ -2,7 +2,7 @@
 title: "About"
 date: 2018-03-30T14:54:25-04:00
 draft: false
-description: "about me!"
+description: "About me, the person"
 ---
 
 # Me
