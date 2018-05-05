@@ -1,6 +1,6 @@
 [submodule "src/themes/minimal"]
 	path = src/themes/minimal
-	url = https://github.com/calintat/minimal.git
+	url = https://github.com/sblack4/minimal.git
 [submodule "src/public"]
 	path = src/public
 	url = https://github.com/sblack4/sblack4.github.io.git
