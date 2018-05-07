@@ -6,12 +6,14 @@ description: "Steven talks about code"
 tags: ["oracle", "developer", "graphql", "devtalk"]
 ---
 
+<a href="https://t.co/XcjjTWZ6Qu" target="_blank" >
+
 ![](https://unofficialoraclecloudhub.github.io/oracledb-graphql-demo/dbcs-graphql-devtalk-sblack4-oracle.png)
+</a>
 
 ## My first developer talk in the books!
 
-You can see the presentation yourself at, 
-
+You can see the recording yourself at [this link](https://t.co/XcjjTWZ6Qu), or get the presentation and all the materials here
 [unofficialoraclecloudhub.github.io/oracledb-graphql-demo/](https://unofficialoraclecloudhub.github.io/oracledb-graphql-demo/)
 
 This site (hosted from out unofficial cloud-hub GitHub repository) has all the materials I presented in my talk.
