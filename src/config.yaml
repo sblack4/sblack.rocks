@@ -27,12 +27,15 @@ menu:
     - url: "/"
       name: "home"
       weight: 1
-    - url: "/blog"
-      name: "blog"
+    - url: "/changelog"
+      name: "changelog"
       weight: 2
+    - url: "/projects"
+      name: "projects"
+      weight: 3
     - url: "/about"
       name: "about"
-      weight: 3
+      weight: 4
   icon: 
     - url: "mailto:sblack.rocks@gmail.com"
       name: "envelope-o"
