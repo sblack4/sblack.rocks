@@ -1,0 +1,21 @@
+{{ partial "header" . }}
+
+<main>
+
+    <h2>{{ .Title }}</h2>
+
+    <div>
+    {{.Content}}
+
+        {{ with .Site.GetPage "page" "changelog/index.md" }}
+            {{ .Content }}
+            {{ markdownify .Content }}
+        {{ end }}
+        
+    {{ range (.Paginator 5).Pages }} {{ partial "list-item" . }} {{ end }}
+</div>
+</main>
+
+{{ partial "paginator" . }}
+
+{{ partial "footer" . }}

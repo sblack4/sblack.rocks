@@ -8,4 +8,11 @@ draft: false
 tags: ["blog"]
 ---
 
-welcome to our home on the wild web!
+welcome to my home on the wild web!
+
+I frequently publish evernote notes too, which automatically end up at [blog.sblack.rocks](http://blog.sblack.rocks/)
+
+
+
+---
+

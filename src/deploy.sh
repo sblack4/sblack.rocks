@@ -12,4 +12,4 @@ cd public
 
 git add . 
 
-echo add commit message and push :)
+echo "add commit message and push :)"
