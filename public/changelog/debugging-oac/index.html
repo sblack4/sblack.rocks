@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Debugging a OAC-BDC Connection</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="https://sblack4.github.io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://sblack4.github.io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://sblack4.github.io/favicon-16x16.png">
+        <link rel="manifest" href="https://sblack4.github.io/site.webmanifest">
+        <link rel="mask-icon" href="https://sblack4.github.io/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://sblack4.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.40.1" />
+        
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116829409-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-116829409-1');
+        </script>
+        
+
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Debugging a OAC-BDC Connection</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="https://sblack4.github.io/">home</a></li>
+                            
+                                <li><a href="https://sblack4.github.io/about">about</a></li>
+                            
+                                <li><a href="https://sblack4.github.io/changelog">changelog</a></li>
+                            
+                                <li><a href="https://blog.sblack.rocks">blog</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:sblack.rocks@gmail.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/sblack4" target="_blank"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/5568528/steven-black" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/Genseb7" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/steven-black/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://medium.com/@sblack4" target="_blank"><i class="fa fa-medium"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://sblack4.github.io/blog/index.xml" target="_blank"><i class="fa fa-rss-square"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="https://sblack4.github.io/changelog/debugging-oac/">Debugging a OAC-BDC Connection</a></h4>
+    <h5>Debuggn a connection between Oracle Analytics Cloud &amp; Big Data Cloud</h5>
+    
+    <a href="https://sblack4.github.iotags/blog"><kbd class="item-tag">blog</kbd></a>
+    
+    <a href="https://sblack4.github.iotags/oac"><kbd class="item-tag">oac</kbd></a>
+    
+    <a href="https://sblack4.github.iotags/bdc"><kbd class="item-tag">bdc</kbd></a>
+    
+    <a href="https://sblack4.github.iotags/spark"><kbd class="item-tag">spark</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<h2 id="debugging-oracle-analytics-cloud-amp-big-data-cloud">Debugging Oracle Analytics Cloud &amp; Big Data Cloud</h2>
+
+<p>My job is pretty varied but one thing that stays constant is requests to connect OAC to BDC.</p>
+
+<h3 id="tail-osa-logs">Tail OSA logs</h3>
+
+<p>Not everyone knows where to find these logs but just run the below command!</p>
+
+<pre><code class="language-bash">tail -f /u01/data/domain/fmw/user_projects/domains/bi/servers/AdminServer/logs/bi.log
+</code></pre>
+
+<p>In our case it reveals some cryptic output&hellip; but it seems that there is a network timeout. That means the issue probably isn&rsquo;t on the OAC side</p>
+
+<pre><code class="language-log">####&lt;May 16, 2018 3:28:13,804 PM UTC&gt; &lt;Error&gt; &lt;oracle.bi.tech.services.dataset.StandaloneDatasetService&gt; &lt;aeoacs-bi-1&gt; &lt;bi_server1&gt; &lt;[STANDBY] ExecuteThread: '40' for queue: 'weblogic.kernel.Default (self-tuning)'&gt; &lt;&lt;anonymous&gt;&gt; &lt;&gt; &lt;0bda8caa-ead8-4bb9-ac04-2173ae17e26c-000faa87&gt; &lt;1526484493804&gt; &lt;[severity-value: 8] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] &gt; &lt;BEA-000000&gt; &lt;Failed to create and convert dataset: javax.ws.rs.ProcessingException: java.net.SocketTimeoutException: Read time out after 300000 millis
+</code></pre>
+
+<h3 id="tail-bdc-logs">Tail BDC Logs</h3>
+
+<pre><code class="language-bash">tail -f /data/var/log/spark2-thrift/spark-hive-org.apache.spark.sql.hive.thriftserver.HiveThriftServer2-1-aebigdata-bdcsce-1.out
+</code></pre>
+
+<p>reveals more cryptic errors&hellip; it looks like maybe the JVM ran out of space during a GC?</p>
+
+<pre><code class="language-bash">18/05/16 15:27:42 ERROR ResourceLeakDetector: LEAK: ByteBuf.release() was not called before it's garbage-collected. Enable advanced leak reporting to find out where the leak occurred. To enable advanced leak reporting, specify the JVM option '-Dio.netty.leakDetection.level=advanced' or call ResourceLeakDetector.setLevel() See http://netty.io/wiki/reference-counted-objects.html for more information.
+18/05/16 15:27:43 ERROR Utils: Uncaught exception in thread task-result-getter-0
+java.lang.OutOfMemoryError: Java heap space
+Exception in thread &quot;task-result-getter-0&quot; java.lang.OutOfMemoryError: Java heap space
+18/05/16 15:37:37 ERROR LiveListenerBus: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes DatanodeInfoWithStorage[100.65.22.122:50010,DS-f8d560be-7098-4529-9b01-7e26b089b17e,DISK] are bad. Aborting...
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.setupPipelineForAppendOrRecovery(DFSOutputStream.java:1142)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.processDatanodeError(DFSOutputStream.java:904)
+        at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:411)
+</code></pre>
+
+<h3 id="tail-bdc-spark-logs">Tail BDC spark logs</h3>
+
+<p>Logs on BDC are stored in a variety of places&hellip;</p>
+
+<pre><code class="language-bash"> tail -f /data/var/log/spark2-thrift/spark-spark-org.apache.spark.deploy.history.HistoryServer-1-aebigdata-bdcsce-1.out
+</code></pre>
+
+<p>reveals the connection AND the subsequent error!</p>
+
+<pre><code class="language-bash">18/05/16 16:18:53 DEBUG Client: IPC Client (2118255842) connection to /100.65.22.122:8010 from blk_1073742054_1231 got value #1156
+18/05/16 16:18:53 DEBUG ProtobufRpcEngine: Call: getReplicaVisibleLength took 10ms
+18/05/16 16:18:53 DEBUG Client: stopping client from cache: org.apache.hadoop.ipc.Client@6399551e
+18/05/16 16:18:53 ERROR FsHistoryProvider: Exception encountered when attempting to load application log hdfs://aebigdata-bdcsce-1.compute-599616642.oraclecloud.internal:8020/spark-history/application_1523503765653_0002.inprogress
+java.io.IOException: Cannot obtain block length for LocatedBlock{BP-2031294994-100.65.22.122-1523503732419:blk_1073742054_1231; getBlockSize()=244; corrupt=false; offset=0; locs=[DatanodeInfoWithStorage[100.65.22.122:50010,DS-f8d560be-7098-4529-9b01-7e26b089b17e,DISK]]}
+        at org.apache.hadoop.hdfs.DFSInputStream.readBlockLength(DFSInputStream.java:428)
+        at org.apache.hadoop.hdfs.DFSInputStream.fetchLocatedBlocksAndGetLastBlockLength(DFSInputStream.java:336)
+        at org.apache.hadoop.hdfs.DFSInputStream.openInfo(DFSInputStream.java:272)
+        at org.apache.hadoop.hdfs.DFSInputStream.&lt;init&gt;(DFSInputStream.java:264)
+        at org.apache.hadoop.hdfs.DFSClient.open(DFSClient.java:1540)
+        at org.apache.hadoop.hdfs.DistributedFileSystem$3.doCall(DistributedFileSystem.java:304)
+        at org.apache.hadoop.hdfs.DistributedFileSystem$3.doCall(DistributedFileSystem.java:300)
+        at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+        at org.apache.hadoop.hdfs.DistributedFileSystem.open(DistributedFileSystem.java:300)
+        at org.apache.hadoop.fs.FileSystem.open(FileSystem.java:767)
+        at org.apache.spark.scheduler.EventLoggingListener$.openEventLog(EventLoggingListener.scala:301)
+        at org.apache.spark.deploy.history.FsHistoryProvider.org$apache$spark$deploy$history$FsHistoryProvider$$replay(FsHistoryProvider.scala:643)
+        at org.apache.spark.deploy.history.FsHistoryProvider.org$apache$spark$deploy$history$FsHistoryProvider$$mergeApplicationListing(FsHistoryProvider.scala:460)
+        at org.apache.spark.deploy.history.FsHistoryProvider$$anonfun$checkForLogs$3$$anon$4.run(FsHistoryProvider.scala:352)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+        at java.lang.Thread.run(Thread.java:748)
+18/05/16 16:18:53 DEBUG Client: IPC Client (2118255842) connection to /100.65.22.122:8010 from blk_1073742054_1231: closed
+18/05/16 16:18:53 DEBUG Client: IPC Client (2118255842) connection to /100.65.22.122:8010 from blk_1073742054_1231: stopped, remaining connections 1
+</code></pre>
+
+<h3 id="check-on-last-log">Check on last log</h3>
+
+<pre><code class="language-bash">vim /data/var/log/spark2-thrift/spark-hive-org.apache.spark.sql.hive.thriftserver.HiveThriftServer2-1-aebigdata-bdcsce-1.out
+</code></pre>
+
+<p>more of the GC errors! Okay, corroborating evidence points to the JVM. We do have a lot of data hehehe&hellip;.</p>
+
+<pre><code>18/05/16 19:01:40 ERROR SparkExecuteStatementOperation: Error executing query, currentState RUNNING,
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+        at java.lang.StringCoding.decode(StringCoding.java:215)
+        at java.lang.String.&lt;init&gt;(String.java:463)
+        at java.lang.String.&lt;init&gt;(String.java:515)
+        at org.apache.spark.unsafe.types.UTF8String.toString(UTF8String.java:1005)
+        at org.apache.spark.sql.catalyst.expressions.GeneratedClass$SpecificSafeProjection.apply_6$(Unknown Source)
+        at org.apache.spark.sql.catalyst.expressions.GeneratedClass$SpecificSafeProjection.apply(Unknown Source)
+        at org.apache.spark.sql.catalyst.encoders.ExpressionEncoder.fromRow(ExpressionEncoder.scala:303)
+        at org.apache.spark.sql.Dataset$$anonfun$org$apache$spark$sql$Dataset$$execute$1$1$$anonfun$apply$13.apply(Dataset.scala:2378)
+        at org.apache.spark.sql.Dataset$$anonfun$org$apache$spark$sql$Dataset$$execute$1$1$$anonfun$apply$13.apply(Dataset.scala:2378)
+        at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+        at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+        at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+        at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+        at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+        at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:186)
+        at org.apache.spark.sql.Dataset$$anonfun$org$apache$spark$sql$Dataset$$execute$1$1.apply(Dataset.scala:2378)
+        at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:57)
+        at org.apache.spark.sql.Dataset.withNewExecutionId(Dataset.scala:2780)
+        at org.apache.spark.sql.Dataset.org$apache$spark$sql$Dataset$$execute$1(Dataset.scala:2377)
+        at org.apache.spark.sql.Dataset$$anonfun$org$apache$spark$sql$Dataset$$collect$1.apply(Dataset.scala:2382)
+        at org.apache.spark.sql.Dataset$$anonfun$org$apache$spark$sql$Dataset$$collect$1.apply(Dataset.scala:2382)
+        at org.apache.spark.sql.Dataset.withCallback(Dataset.scala:2793)
+        at org.apache.spark.sql.Dataset.org$apache$spark$sql$Dataset$$collect(Dataset.scala:2382)
+        at org.apache.spark.sql.Dataset.collect(Dataset.scala:2358)
+        at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.org$apache$spark$sql$hive$thriftserver$SparkExecuteStatementOperation$$execute(SparkExecuteStatementOperation.scala:245)
+        at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$1$$anon$2.run(SparkExecuteStatementOperation.scala:174)
+        at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$1$$anon$2.run(SparkExecuteStatementOperation.scala:171)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at javax.security.auth.Subject.doAs(Subject.java:422)
+        at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1709)
+        at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$1.run(SparkExecuteStatementOperation.scala:184)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+18/05/16 19:01:40 ERROR SparkExecuteStatementOperation: Error running hive query:
+org.apache.hive.service.cli.HiveSQLException: java.lang.OutOfMemoryError: GC overhead limit exceeded
+        at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.org$apache$spark$sql$hive$thriftserver$SparkExecuteStatementOperation$$execute(SparkExecuteStatementOperation.scala:266)
+        at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$1$$anon$2.run(SparkExecuteStatementOperation.scala:174)
+        at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$1$$anon$2.run(SparkExecuteStatementOperation.scala:171)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at javax.security.auth.Subject.doAs(Subject.java:422)
+        at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1709)
+        at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$1.run(SparkExecuteStatementOperation.scala:184)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+        at java.lang.Thread.run(Thread.java:748)
+</code></pre>
+
+<h3 id="thank-you-stackoverflow">Thank You StackOverflow</h3>
+
+<p>So I asked the interwebs and they replied &ldquo;over yonder website doth thy answer live&rdquo; and pointed me to the below link</p>
+
+<p><a href="https://stackoverflow.com/questions/46979848/spark-thriftserver-stops-or-freezes-due-to-tableau-queries">https://stackoverflow.com/questions/46979848/spark-thriftserver-stops-or-freezes-due-to-tableau-queries</a></p>
+
+<p>I added <code>spark.sql.thriftServer.incrementalCollect=true</code> to <code>spark2-thirft-sparkconf.xml</code> in Ambari.
+I went ahead and beefed up our <code>spark-env.sh</code> too</p>
+
+<pre><code class="language-bash">SPARK_EXECUTOR_CORES=&quot;2&quot; #Number of cores for the workers (Default: 1).
+SPARK_EXECUTOR_MEMORY=&quot;2G&quot; #Memory per Worker (e.g. 1000M, 2G) (Default: 1G)
+SPARK_DRIVER_MEMORY=&quot;1080M&quot; #Memory for Master (e.g. 1000M, 2G) (Default: 512 Mb)
+</code></pre>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="text-muted">
+                Powered by <a href="https://gohugo.io">Hugo</a> &amp; <a href="https://github.com/calintat/minimal">Minimal</a> &amp; <a href="https://github.com">GitHub</a> &amp; Green Tea ❤️
+
+            </p>
+
+        </footer>
+       
+    </body>
+
+</html>
+
