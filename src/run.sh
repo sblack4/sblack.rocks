@@ -1,3 +1,6 @@
 #!/bin/bash
 
-../bin/hugo server -D -w
+
+echo "Running hugo development server"
+
+hugo server -D -w
