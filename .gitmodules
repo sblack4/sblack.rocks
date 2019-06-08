@@ -1,3 +1,7 @@
 [submodule "src/themes/minimal"]
 	path = src/themes/minimal
 	url = https://github.com/sblack4/minimal.git
+[submodule "src/src/public"]
+	path = src/src/public
+	url = https://github.com/sblack4/sblack4.github.io.git
+	branch = master
