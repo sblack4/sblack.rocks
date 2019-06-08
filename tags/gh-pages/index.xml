@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gh Pages on S Black (dot) Rocks</title>
+    <link>https://sblack4.github.io/tags/gh-pages/</link>
+    <description>Recent content in Gh Pages on S Black (dot) Rocks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 May 2018 11:14:21 -0400</lastBuildDate>
+    
+	<atom:link href="https://sblack4.github.io/tags/gh-pages/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Debugging Gatsby Static Site Builder</title>
+      <link>https://sblack4.github.io/changelog/debugging-gatsby-static-site-builder/</link>
+      <pubDate>Thu, 03 May 2018 11:14:21 -0400</pubDate>
+      
+      <guid>https://sblack4.github.io/changelog/debugging-gatsby-static-site-builder/</guid>
+      <description>Gatsby JS I love code &amp;amp; I love good documentation so I LOVE a great static-site builder like Hugo, or the super-lightweight static-site scheme oracle learning-library uses. There&amp;rsquo;s been a lot of buzz about Gatsby so I decided to give it a go!
+ 
+I Built a static site with Gatsby js, pictured above &amp;amp; available at https://unofficialoraclecloudhub.github.io/oracledb-graphql-demo/
+
+Building the Site All of the code is available at https://github.</description>
+    </item>
+    
+    <item>
+      <title>My Old Site Sblack Dot Rocks</title>
+      <link>https://sblack4.github.io/changelog/my-old-site-sblack-dot-rocks/</link>
+      <pubDate>Sat, 31 Mar 2018 13:15:28 -0400</pubDate>
+      
+      <guid>https://sblack4.github.io/changelog/my-old-site-sblack-dot-rocks/</guid>
+      <description>my old site, sblack.rocks is being retired My old static site, was really fun to build (and one of the last things I did in Typescript - which is a FANTASTIC language) but is way more complicated than managing a simple static site like this one, which I can write in Markdown!
+I&amp;rsquo;m going to keep it on the web, projects like that have nostaligic value. Like looking at old family photos it brings back warm memories and lets me know how much I&amp;rsquo;ve learned since then!</description>
+    </item>
+    
+  </channel>
+</rss>

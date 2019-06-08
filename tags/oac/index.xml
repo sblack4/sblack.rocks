@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oac on S Black (dot) Rocks</title>
+    <link>https://sblack4.github.io/tags/oac/</link>
+    <description>Recent content in Oac on S Black (dot) Rocks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 May 2018 13:56:29 -0400</lastBuildDate>
+    
+	<atom:link href="https://sblack4.github.io/tags/oac/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Debugging a OAC-BDC Connection</title>
+      <link>https://sblack4.github.io/changelog/debugging-oac/</link>
+      <pubDate>Mon, 21 May 2018 13:56:29 -0400</pubDate>
+      
+      <guid>https://sblack4.github.io/changelog/debugging-oac/</guid>
+      <description>Debugging Oracle Analytics Cloud &amp;amp; Big Data Cloud My job is pretty varied but one thing that stays constant is requests to connect OAC to BDC.
+Tail OSA logs Not everyone knows where to find these logs but just run the below command!
+tail -f /u01/data/domain/fmw/user_projects/domains/bi/servers/AdminServer/logs/bi.log  In our case it reveals some cryptic output&amp;hellip; but it seems that there is a network timeout. That means the issue probably isn&amp;rsquo;t on the OAC side</description>
+    </item>
+    
+  </channel>
+</rss>
