@@ -28,9 +28,9 @@ menu:
     - url: "/"
       name: "home"
       weight: 1
-    - url: "/about"
-      name: "about"
-      weight: 2
+    # - url: "/about"
+    #   name: "about"
+    #   weight: 2
     - url: "/changelog"
       name: "changelog"
       weight: 3
