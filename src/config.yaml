@@ -1,5 +1,5 @@
 ---
-baseURL: "https://sblack4.github.io"
+baseURL: "https://sblack.rocks"
 languageCode: "en-us"
 title: "S Black (dot) Rocks"
 paginate: 100
@@ -37,9 +37,9 @@ menu:
     # - url: "/projects"
     #   name: "projects"
     #   weight: 3
-    - url: "https://blog.sblack.rocks"
-      name: "blog"
-      weight: 5
+    # - url: "https://blog.sblack.rocks"
+    #   name: "blog"
+    #   weight: 5
   icon: 
     - url: "mailto:sblack.rocks@gmail.com"
       name: "envelope-o"
