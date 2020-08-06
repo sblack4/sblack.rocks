@@ -1,28 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Gatsby on S Black (dot) Rocks</title>
-    <link>https://sblack4.github.io/tags/gatsby/</link>
-    <description>Recent content in Gatsby on S Black (dot) Rocks</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 03 May 2018 11:14:21 -0400</lastBuildDate>
-    
-	<atom:link href="https://sblack4.github.io/tags/gatsby/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Debugging Gatsby Static Site Builder</title>
-      <link>https://sblack4.github.io/changelog/debugging-gatsby-static-site-builder/</link>
-      <pubDate>Thu, 03 May 2018 11:14:21 -0400</pubDate>
-      
-      <guid>https://sblack4.github.io/changelog/debugging-gatsby-static-site-builder/</guid>
-      <description>Gatsby JS I love code &amp;amp; I love good documentation so I LOVE a great static-site builder like Hugo, or the super-lightweight static-site scheme oracle learning-library uses. There&amp;rsquo;s been a lot of buzz about Gatsby so I decided to give it a go!
- 
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gatsby on S Black (dot) Rocks</title><link>https://sblack4.github.io/tags/gatsby/</link><description>Recent content in gatsby on S Black (dot) Rocks</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 03 May 2018 11:14:21 -0400</lastBuildDate><atom:link href="https://sblack4.github.io/tags/gatsby/index.xml" rel="self" type="application/rss+xml"/><item><title>Debugging Gatsby Static Site Builder</title><link>https://sblack4.github.io/changelog/debugging-gatsby-static-site-builder/</link><pubDate>Thu, 03 May 2018 11:14:21 -0400</pubDate><guid>https://sblack4.github.io/changelog/debugging-gatsby-static-site-builder/</guid><description>Gatsby JS I love code &amp;amp; I love good documentation so I LOVE a great static-site builder like Hugo, or the super-lightweight static-site scheme oracle learning-library uses. There&amp;rsquo;s been a lot of buzz about Gatsby so I decided to give it a go!
 I Built a static site with Gatsby js, pictured above &amp;amp; available at https://unofficialoraclecloudhub.github.io/oracledb-graphql-demo/
-
-Building the Site All of the code is available at https://github.</description>
-    </item>
-    
-  </channel>
-</rss>
+Building the Site All of the code is available at https://github.com/unofficialoraclecloudhub/oracledb-graphql-demo/tree/master/docs. I used ericwindmill/gatsby-starter-docs as the starting point.</description></item></channel></rss>

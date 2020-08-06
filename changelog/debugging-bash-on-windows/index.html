@@ -1,319 +1,58 @@
-<!DOCTYPE html>
-<html lang="en-us">
-    <head>
-         
-
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Debugging Bash on Windows</title>
-
-        <link rel="apple-touch-icon" sizes="180x180" href="https://sblack4.github.io/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="https://sblack4.github.io/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="https://sblack4.github.io/favicon-16x16.png">
-        <link rel="manifest" href="https://sblack4.github.io/site.webmanifest">
-        <link rel="mask-icon" href="https://sblack4.github.io/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
-        
-        <style>
-
-    html body {
-        font-family: 'Raleway', sans-serif;
-        background-color: white;
-    }
-
-    :root {
-        --accent: red;
-        --border-width:  5px ;
-    }
-
-</style>
-
-
-<link rel="stylesheet" href="https://sblack4.github.io/css/main.css">
-
-
-
-
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
- 
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script> 
-
-    <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.40.1" />
-        
-        
-
-        
-        
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116829409-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)};
-          gtag('js', new Date());
-
-          gtag('config', 'UA-116829409-1');
-        </script>
-        
-
-    </head>
-
-    
-    
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
-    
-
-    <body>
-         
-        <nav class="navbar navbar-default navbar-fixed-top">
-
-            <div class="container">
-
-                <div class="navbar-header">
-
-                    <a class="navbar-brand visible-xs" href="#">Debugging Bash on Windows</a>
-
-                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                </div>
-
-                <div class="collapse navbar-collapse">
-
-                    
-                        <ul class="nav navbar-nav">
-                            
-                                <li><a href="https://sblack4.github.io/">home</a></li>
-                            
-                                <li><a href="https://sblack4.github.io/about">about</a></li>
-                            
-                                <li><a href="https://sblack4.github.io/changelog">changelog</a></li>
-                            
-                                <li><a href="https://blog.sblack.rocks">blog</a></li>
-                            
-                        </ul>
-                    
-
-                    
-                        <ul class="nav navbar-nav navbar-right">
-                            
-                                <li class="navbar-icon"><a href="mailto:sblack.rocks@gmail.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://github.com/sblack4" target="_blank"><i class="fa fa-github"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/5568528/steven-black" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://twitter.com/Genseb7" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/steven-black/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://medium.com/@sblack4" target="_blank"><i class="fa fa-medium"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://sblack4.github.io/blog/index.xml" target="_blank"><i class="fa fa-rss-square"></i></a></li>
-                            
-                        </ul>
-                    
-
-                </div>
-
-            </div>
-
-        </nav>
-
-
-<main>
-
-    <div class="item">
-
-    
-    
-    
-
-    
-      
-
-    <h4><a href="https://sblack4.github.io/changelog/debugging-bash-on-windows/">Debugging Bash on Windows</a></h4>
-    <h5>Using the WSL and vscode to debug bash scripts on windows</h5>
-    
-    <a href="https://sblack4.github.iotags/debugging"><kbd class="item-tag">debugging</kbd></a>
-    
-    <a href="https://sblack4.github.iotags/bash"><kbd class="item-tag">bash</kbd></a>
-    
-    <a href="https://sblack4.github.iotags/vscode"><kbd class="item-tag">vscode</kbd></a>
-    
-    <a href="https://sblack4.github.iotags/windows"><kbd class="item-tag">windows</kbd></a>
-    
-
-</div>
-
-
-    <br> <div class="text-justify">
-
-<p>TODO:(sblack4) finish links when I get internet
-- I wrote this on an airplane bach from HQ</p>
-
-<h1 id="debugging-bash-on-windows">Debugging Bash on Windows</h1>
-
-<h2 id="using-the-wsl-and-vscode-to-debug-bash-scripts-on-windows">Using the WSL and vscode to debug bash scripts on windows</h2>
-
-<p><a href="#TODO:wikipedia on bash">bash</a>
-(in this case the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">windows subsystem for linux</a>),
-<a href="https://code.visualstudio.com">visual studio code</a>,
-<a href="https://www.docker.com/">docker</a>
-these are a few of my favorite things!</p>
-
-<p><img src="https://sblack4.github.io/img/ubuntu-on-windows-cmder.png" alt="bash on ubuntu on windows" /></p>
-
-<p>is it overkill when your running <a href="https://docs.microsoft.com/en-us/windows/wsl/about">wsl</a>
-in a terminal emulator (<a href="http://cmder.net/">cmder</a>)</p>
-
-<p>I&rsquo;ve toyed with docker but hadn&rsquo;t seriously used it for work. With access to the cloud
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Debugging Bash on Windows</title><link rel=apple-touch-icon sizes=180x180 href=https://sblack4.github.io/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=https://sblack4.github.io/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=https://sblack4.github.io/favicon-16x16.png><link rel=manifest href=https://sblack4.github.io/site.webmanifest><link rel=mask-icon href=https://sblack4.github.io/safari-pinned-tab.svg color=#5bbad5><meta name=msapplication-TileColor content="#da532c"><meta name=theme-color content="#ffffff"><style>html body{font-family:raleway,sans-serif;background-color:#fff}:root{--accent: red;--border-width:  5px }</style><link rel=stylesheet href=https://sblack4.github.io/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Raleway"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css><link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous><link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css integrity=sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN crossorigin=anonymous><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js></script><script>hljs.initHighlightingOnLoad();</script><script src=https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js></script><script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script><script>$(document).on('click',function(){$('.collapse').collapse('hide');})</script><meta name=generator content="Hugo 0.74.2"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-116829409-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','UA-116829409-1');</script></head><script type=text/javascript async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><body><nav class="navbar navbar-default navbar-fixed-top"><div class=container><div class=navbar-header><a class="navbar-brand visible-xs" href=#>Debugging Bash on Windows</a>
+<button class=navbar-toggle data-target=.navbar-collapse data-toggle=collapse>
+<span class=icon-bar></span><span class=icon-bar></span><span class=icon-bar></span></button></div><div class="collapse navbar-collapse"><ul class="nav navbar-nav"><li><a href=https://sblack4.github.io/>home</a></li><li><a href=https://sblack4.github.io/about>about</a></li><li><a href=https://sblack4.github.io/changelog>changelog</a></li><li><a href=https://blog.sblack.rocks>blog</a></li></ul><ul class="nav navbar-nav navbar-right"><li class=navbar-icon><a href=mailto:sblack.rocks@gmail.com target=_blank><i class="fa fa-envelope-o"></i></a></li><li class=navbar-icon><a href=https://github.com/sblack4 target=_blank><i class="fa fa-github"></i></a></li><li class=navbar-icon><a href=https://stackoverflow.com/users/5568528/steven-black target=_blank><i class="fa fa-stack-overflow"></i></a></li><li class=navbar-icon><a href=https://twitter.com/Genseb7 target=_blank><i class="fa fa-twitter"></i></a></li><li class=navbar-icon><a href=https://www.linkedin.com/in/steven-black/ target=_blank><i class="fa fa-linkedin"></i></a></li><li class=navbar-icon><a href=https://medium.com/@sblack4 target=_blank><i class="fa fa-medium"></i></a></li><li class=navbar-icon><a href=https://sblack4.github.io/blog/index.xml target=_blank><i class="fa fa-rss-square"></i></a></li></ul></div></div></nav><main><div class=item><h4><a href=https://sblack4.github.io/changelog/debugging-bash-on-windows/>Debugging Bash on Windows</a></h4><h5>Using the WSL and vscode to debug bash scripts on windows</h5><a href=https://sblack4.github.iotags/debugging><kbd class=item-tag>debugging</kbd></a>
+<a href=https://sblack4.github.iotags/bash><kbd class=item-tag>bash</kbd></a>
+<a href=https://sblack4.github.iotags/vscode><kbd class=item-tag>vscode</kbd></a>
+<a href=https://sblack4.github.iotags/windows><kbd class=item-tag>windows</kbd></a></div><br><div class=text-justify><p>TODO:(sblack4) finish links when I get internet</p><ul><li>I wrote this on an airplane bach from HQ</li></ul><h1 id=debugging-bash-on-windows>Debugging Bash on Windows</h1><h2 id=using-the-wsl-and-vscode-to-debug-bash-scripts-on-windows>Using the WSL and vscode to debug bash scripts on windows</h2><p>[bash](#TODO:wikipedia on bash)
+(in this case the <a href=https://docs.microsoft.com/en-us/windows/wsl/install-win10>windows subsystem for linux</a>),
+<a href=https://code.visualstudio.com>visual studio code</a>,
+<a href=https://www.docker.com/>docker</a>
+these are a few of my favorite things!</p><p><img src=https://sblack4.github.io/img/ubuntu-on-windows-cmder.png alt="bash on ubuntu on windows"></p><p>is it overkill when your running <a href=https://docs.microsoft.com/en-us/windows/wsl/about>wsl</a>
+in a terminal emulator (<a href=http://cmder.net/>cmder</a>)</p><p>I&rsquo;ve toyed with docker but hadn&rsquo;t seriously used it for work. With access to the cloud
 it&rsquo;s (usually) easy to get a VM with the services I want on it! That changed when I saw how a
 easy it was for a few of my peers to spin up containers with docker and werker!
-There&rsquo;s a great tutorial by a friend of mine, <a href="https://oracle.github.io/learning-library/workshops/container-native-development/">here on github</a>
-that covers container native development.</p>
-
-<h2 id="the-problem">The problem</h2>
-
-<p>I want to play with <a href="https://github.com/gschmutz/dockerfiles/tree/master/oracle-stream-analytics">oracle streaming analytics in docker</a>
-and some of the other docker images in <a href="https://github.com/oracle/docker-images">oracle&rsquo;s docker library</a>.
+There&rsquo;s a great tutorial by a friend of mine, <a href=https://oracle.github.io/learning-library/workshops/container-native-development/>here on github</a>
+that covers container native development.</p><h2 id=the-problem>The problem</h2><p>I want to play with <a href=https://github.com/gschmutz/dockerfiles/tree/master/oracle-stream-analytics>oracle streaming analytics in docker</a>
+and some of the other docker images in <a href=https://github.com/oracle/docker-images>oracle&rsquo;s docker library</a>.
 There are shell scripts to assist in setting up the image which would be <em>super helpful</em> if I
 was running linux! Working in a large corporation that makes heavy use of certain programs,
 <em>cough, office, cough</em>, makes using windows a lot more conveinient. Not to mention I never have to
-worry about drivers for third party devices (anyone who has tried to use linux as their personal computer will know what I mean)!</p>
-
-<p>Although with google&rsquo;s <a href="#TODO:wiki chomeos">chrome os</a>
+worry about drivers for third party devices (anyone who has tried to use linux as their personal computer will know what I mean)!</p><p>Although with google&rsquo;s [chrome os](#TODO:wiki chomeos)
 becoming so common, and most services moving to a subscription-based SaaS model (Office 365, G-Suite)
-it has never been easier for everyday use of linux.</p>
-
-<h2 id="the-fix">The fix</h2>
-
-<h3 id="windows-subsystem-for-linux-wsl">Windows Subsystem for Linux (wsl)</h3>
-
-<p>Windows 10 introduced the <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">wsl</a>
+it has never been easier for everyday use of linux.</p><h2 id=the-fix>The fix</h2><h3 id=windows-subsystem-for-linux-wsl>Windows Subsystem for Linux (wsl)</h3><p>Windows 10 introduced the <a href=https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux>wsl</a>
 starting out with ubuntu on windows, which is why you&rsquo;ll see me use <code>apt-get</code>.
-I love <a href="https://en.wikipedia.org/wiki/Ubuntu_(operating_system)">ubuntu</a>
+I love <a href=https://en.wikipedia.org/wiki/Ubuntu_(operating_system)>ubuntu</a>
 but I work most with red-hat based distrubutions like
-<a href="#TODO: wiki oracle linux">oracle linux</a>.
-<a href="https://linuxmint.com/">Linux Mint</a> has caught my eye recently though&hellip; :smiley:</p>
-
-<p><div>
-    <img src="https://sblack4.github.io/img/vscode-logo.png" width="200" style="position:absolute;z-index:-1;" />
-</div></p>
-
-<h3 id="vs-code">VS Code</h3>
-
-<p>I love <a href="https://code.visualstudio.com/">VS Code</a>
-of all the text editors I&rsquo;ve used it&rsquo;s the fastest as well as the one with the best community/plugins.</p>
-
-<p>In this case <a href="#TODO: bash debug page">Bash Debug</a>
-lets you step through bash scripts (I didn&rsquo;t know you could debug bash at all!)</p>
-
-<h4 id="bash-debug">Bash Debug</h4>
-
-<p>Bash debug takes a little set-up. Here&rsquo;s my <code>$BASEDIR/.vscode/launch.json</code>
-it launches the bash script in view with three arg <code>-v 12.2.1 -A -s</code></p>
-
-<pre><code class="language-json">{
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    &quot;version&quot;: &quot;0.2.0&quot;,
-    &quot;configurations&quot;: [
+[oracle linux](#TODO: wiki oracle linux).
+<a href=https://linuxmint.com/>Linux Mint</a> has caught my eye recently though&mldr; :smiley:</p><p>In this case [Bash Debug](#TODO: bash debug page)
+lets you step through bash scripts (I didn&rsquo;t know you could debug bash at all!)</p><h4 id=bash-debug>Bash Debug</h4><p>Bash debug takes a little set-up. Here&rsquo;s my <code>$BASEDIR/.vscode/launch.json</code>
+it launches the bash script in view with three arg <code>-v 12.2.1 -A -s</code></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+    <span style=color:#960050;background-color:#1e0010>//</span> <span style=color:#960050;background-color:#1e0010>Use</span> <span style=color:#960050;background-color:#1e0010>IntelliSense</span> <span style=color:#960050;background-color:#1e0010>to</span> <span style=color:#960050;background-color:#1e0010>learn</span> <span style=color:#960050;background-color:#1e0010>about</span> <span style=color:#960050;background-color:#1e0010>possible</span> <span style=color:#960050;background-color:#1e0010>attributes.</span>
+    <span style=color:#960050;background-color:#1e0010>//</span> <span style=color:#960050;background-color:#1e0010>Hover</span> <span style=color:#960050;background-color:#1e0010>to</span> <span style=color:#960050;background-color:#1e0010>view</span> <span style=color:#960050;background-color:#1e0010>descriptions</span> <span style=color:#960050;background-color:#1e0010>of</span> <span style=color:#960050;background-color:#1e0010>existing</span> <span style=color:#960050;background-color:#1e0010>attributes.</span>
+    <span style=color:#960050;background-color:#1e0010>//</span> <span style=color:#960050;background-color:#1e0010>For</span> <span style=color:#960050;background-color:#1e0010>more</span> <span style=color:#960050;background-color:#1e0010>information,</span> <span style=color:#960050;background-color:#1e0010>visit:</span> <span style=color:#960050;background-color:#1e0010>https://go.microsoft.com/fwlink/?linkid=830387</span>
+    <span style=color:#f92672>&#34;version&#34;</span>: <span style=color:#e6db74>&#34;0.2.0&#34;</span>,
+    <span style=color:#f92672>&#34;configurations&#34;</span>: [
         
         {
-            &quot;type&quot;: &quot;bashdb&quot;,
-            &quot;request&quot;: &quot;launch&quot;,
-            &quot;pathBash&quot;: &quot;C:\\Windows\\System32\\bash.exe&quot;,
-            &quot;name&quot;: &quot;Bash-Debug (simplest configuration)&quot;,
-            &quot;program&quot;: &quot;${file}&quot;,
-            &quot;args&quot;: [
-                &quot;-v 12.2.1&quot;,
-                &quot;-A&quot;,
-                &quot;-s&quot;
+            <span style=color:#f92672>&#34;type&#34;</span>: <span style=color:#e6db74>&#34;bashdb&#34;</span>,
+            <span style=color:#f92672>&#34;request&#34;</span>: <span style=color:#e6db74>&#34;launch&#34;</span>,
+            <span style=color:#f92672>&#34;pathBash&#34;</span>: <span style=color:#e6db74>&#34;C:\\Windows\\System32\\bash.exe&#34;</span>,
+            <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;Bash-Debug (simplest configuration)&#34;</span>,
+            <span style=color:#f92672>&#34;program&#34;</span>: <span style=color:#e6db74>&#34;${file}&#34;</span>,
+            <span style=color:#f92672>&#34;args&#34;</span>: [
+                <span style=color:#e6db74>&#34;-v 12.2.1&#34;</span>,
+                <span style=color:#e6db74>&#34;-A&#34;</span>,
+                <span style=color:#e6db74>&#34;-s&#34;</span>
             ]
         }
     ]
 }
-</code></pre>
-
-<h2 id="the-results">The Results</h2>
-
-<p>Very simply, this is awesome.  I&rsquo;ve been struggling to improve my bash recently, this will help.</p>
-
-<p><img src="https://sblack4.github.io/img/bash-debug-on-windows.PNG" alt="bash debug on windows" /></p>
-
-<p>I managed to figure out how to launch docker from the wsl too! Even though <code>docker</code> is aliased in
+</code></pre></div><h2 id=the-results>The Results</h2><p>Very simply, this is awesome. I&rsquo;ve been struggling to improve my bash recently, this will help.</p><p><img src=https://sblack4.github.io/img/bash-debug-on-windows.PNG alt="bash debug on windows"></p><p>I managed to figure out how to launch docker from the wsl too! Even though <code>docker</code> is aliased in
 the <code>~/.bash_aliases</code> bash doesn&rsquo;t automatically extend these aliases in scripts.
-By substituting <code>docker</code> for the absolute path and call to launch <code>docker.exe</code></p>
-
-<p>This was the script that needed fixing - some of the downloads turned out to be outdated and the links were broken</p>
-
-<pre><code class="language-sh"># BUILD THE IMAGE (replace all environment variables)
-BUILD_START=$(date '+%s')
-/mnt/c/Program\ Files/Docker/Docker/resources/bin/docker.exe build --force-rm=$NOCACHE --no-cache=$NOCACHE $PROXY_SETTINGS -t $IMAGE_NAME -f osa-dockerfiles/oracle-stream-analytics/dockerfiles/12.2.1/Dockerfile.$DISTRIBUTION . || {
-  echo &quot;There was an error building the image.&quot;
-  exit 1
-}
-</code></pre>
-
-<ul>
-<li>from <a href="https://github.com/gschmutz/dockerfiles/tree/master/oracle-stream-analytics/dockerfiles/buildDockerImage.sh">this script to start a oracle-stream-analytics docker container</a></li>
-</ul>
-</div>
-
-    
-    
-
-    
-
-    
-
-</main>
-
-        <footer>
-
-            <p class="text-muted">
-                Powered by <a href="https://gohugo.io">Hugo</a> &amp; <a href="https://github.com/calintat/minimal">Minimal</a> &amp; <a href="https://github.com">GitHub</a> &amp; Green Tea ❤️
-
-            </p>
-
-        </footer>
-       
-    </body>
-
-</html>
-
+By substituting <code>docker</code> for the absolute path and call to launch <code>docker.exe</code></p><p>This was the script that needed fixing - some of the downloads turned out to be outdated and the links were broken</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=color:#75715e># BUILD THE IMAGE (replace all environment variables)</span>
+BUILD_START<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>date <span style=color:#e6db74>&#39;+%s&#39;</span><span style=color:#66d9ef>)</span>
+/mnt/c/Program<span style=color:#ae81ff>\ </span>Files/Docker/Docker/resources/bin/docker.exe build --force-rm<span style=color:#f92672>=</span>$NOCACHE --no-cache<span style=color:#f92672>=</span>$NOCACHE $PROXY_SETTINGS -t $IMAGE_NAME -f osa-dockerfiles/oracle-stream-analytics/dockerfiles/12.2.1/Dockerfile.$DISTRIBUTION . <span style=color:#f92672>||</span> <span style=color:#f92672>{</span>
+  echo <span style=color:#e6db74>&#34;There was an error building the image.&#34;</span>
+  exit <span style=color:#ae81ff>1</span>
+<span style=color:#f92672>}</span>
+</code></pre></div><ul><li>from <a href=https://github.com/gschmutz/dockerfiles/tree/master/oracle-stream-analytics/dockerfiles/buildDockerImage.sh>this script to start a oracle-stream-analytics docker container</a></li></ul></div></main><footer><p class=text-muted>Powered by <a href=https://gohugo.io>Hugo</a> & <a href=https://github.com/calintat/minimal>Minimal</a> & <a href=https://github.com>GitHub</a> & Green Tea ❤️</p></footer></body></html>

@@ -1,27 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Bash on S Black (dot) Rocks</title>
-    <link>https://sblack4.github.io/tags/bash/</link>
-    <description>Recent content in Bash on S Black (dot) Rocks</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 20 Apr 2018 11:52:09 -0700</lastBuildDate>
-    
-	<atom:link href="https://sblack4.github.io/tags/bash/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Debugging Bash on Windows</title>
-      <link>https://sblack4.github.io/changelog/debugging-bash-on-windows/</link>
-      <pubDate>Fri, 20 Apr 2018 11:52:09 -0700</pubDate>
-      
-      <guid>https://sblack4.github.io/changelog/debugging-bash-on-windows/</guid>
-      <description>TODO:(sblack4) finish links when I get internet - I wrote this on an airplane bach from HQ
-Debugging Bash on Windows Using the WSL and vscode to debug bash scripts on windows bash (in this case the windows subsystem for linux), visual studio code, docker these are a few of my favorite things!
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>bash on S Black (dot) Rocks</title><link>https://sblack4.github.io/tags/bash/</link><description>Recent content in bash on S Black (dot) Rocks</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 20 Apr 2018 11:52:09 -0700</lastBuildDate><atom:link href="https://sblack4.github.io/tags/bash/index.xml" rel="self" type="application/rss+xml"/><item><title>Debugging Bash on Windows</title><link>https://sblack4.github.io/changelog/debugging-bash-on-windows/</link><pubDate>Fri, 20 Apr 2018 11:52:09 -0700</pubDate><guid>https://sblack4.github.io/changelog/debugging-bash-on-windows/</guid><description>TODO:(sblack4) finish links when I get internet
+I wrote this on an airplane bach from HQ Debugging Bash on Windows Using the WSL and vscode to debug bash scripts on windows [bash](#TODO:wikipedia on bash) (in this case the windows subsystem for linux), visual studio code, docker these are a few of my favorite things!
 is it overkill when your running wsl in a terminal emulator (cmder)
-I&amp;rsquo;ve toyed with docker but hadn&amp;rsquo;t seriously used it for work.</description>
-    </item>
-    
-  </channel>
-</rss>
+I&amp;rsquo;ve toyed with docker but hadn&amp;rsquo;t seriously used it for work.</description></item></channel></rss>

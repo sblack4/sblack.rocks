@@ -1,26 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Demo on S Black (dot) Rocks</title>
-    <link>https://sblack4.github.io/tags/demo/</link>
-    <description>Recent content in Demo on S Black (dot) Rocks</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 19 Apr 2018 17:36:27 -0700</lastBuildDate>
-    
-	<atom:link href="https://sblack4.github.io/tags/demo/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Recording in Oracle Studios</title>
-      <link>https://sblack4.github.io/changelog/recording-in-oracle-studios/</link>
-      <pubDate>Thu, 19 Apr 2018 17:36:27 -0700</pubDate>
-      
-      <guid>https://sblack4.github.io/changelog/recording-in-oracle-studios/</guid>
-      <description>Recording in Oracle Studios My team and I had a lot of fun recording demos at Oracle Studios in Redwood Shores, CA!
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>demo on S Black (dot) Rocks</title><link>https://sblack4.github.io/tags/demo/</link><description>Recent content in demo on S Black (dot) Rocks</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 19 Apr 2018 17:36:27 -0700</lastBuildDate><atom:link href="https://sblack4.github.io/tags/demo/index.xml" rel="self" type="application/rss+xml"/><item><title>Recording in Oracle Studios</title><link>https://sblack4.github.io/changelog/recording-in-oracle-studios/</link><pubDate>Thu, 19 Apr 2018 17:36:27 -0700</pubDate><guid>https://sblack4.github.io/changelog/recording-in-oracle-studios/</guid><description>Recording in Oracle Studios My team and I had a lot of fun recording demos at Oracle Studios in Redwood Shores, CA!
 Check out the green room where @AZaman001 was recording her IOT demo. Not only did the recording staff let us re-record, so we got everything just right, but we got fed too!
-The weather was a little chilly - but I do love exploring new places! There were plenty of interesting sights</description>
-    </item>
-    
-  </channel>
-</rss>
+The weather was a little chilly - but I do love exploring new places! There were plenty of interesting sights</description></item></channel></rss>

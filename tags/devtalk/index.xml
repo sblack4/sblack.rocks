@@ -1,25 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Devtalk on S Black (dot) Rocks</title>
-    <link>https://sblack4.github.io/tags/devtalk/</link>
-    <description>Recent content in Devtalk on S Black (dot) Rocks</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 04 May 2018 14:25:27 -0400</lastBuildDate>
-    
-	<atom:link href="https://sblack4.github.io/tags/devtalk/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Graphql Oracledb Stand Up Friday Talk</title>
-      <link>https://sblack4.github.io/changelog/graphql-oracledb-stand-up-friday-talk/</link>
-      <pubDate>Fri, 04 May 2018 14:25:27 -0400</pubDate>
-      
-      <guid>https://sblack4.github.io/changelog/graphql-oracledb-stand-up-friday-talk/</guid>
-      <description>My first developer talk in the books! You can see the recording yourself at this link, or get the presentation and all the materials here unofficialoraclecloudhub.github.io/oracledb-graphql-demo/
-This site (hosted from out unofficial cloud-hub GitHub repository) has all the materials I presented in my talk. The GitHub repo that has the code for the site also has everything you need to run the modified GraphsiQL app on a real Oracle Database yourself!</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>devtalk on S Black (dot) Rocks</title><link>https://sblack4.github.io/tags/devtalk/</link><description>Recent content in devtalk on S Black (dot) Rocks</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 04 May 2018 14:25:27 -0400</lastBuildDate><atom:link href="https://sblack4.github.io/tags/devtalk/index.xml" rel="self" type="application/rss+xml"/><item><title>Graphql Oracledb Stand Up Friday Talk</title><link>https://sblack4.github.io/changelog/graphql-oracledb-stand-up-friday-talk/</link><pubDate>Fri, 04 May 2018 14:25:27 -0400</pubDate><guid>https://sblack4.github.io/changelog/graphql-oracledb-stand-up-friday-talk/</guid><description>My first developer talk in the books! You can see the recording yourself at this link, or get the presentation and all the materials here unofficialoraclecloudhub.github.io/oracledb-graphql-demo/
+This site (hosted from out unofficial cloud-hub GitHub repository) has all the materials I presented in my talk. The GitHub repo that has the code for the site also has everything you need to run the modified GraphsiQL app on a real Oracle Database yourself!</description></item></channel></rss>
