@@ -10,9 +10,5 @@ tags: ["blog"]
 
 welcome to my home on the wild web!
 
-I frequently publish evernote notes too, which automatically end up at [blog.sblack.rocks](http://blog.sblack.rocks/)
-
-
-
 ---
 

@@ -1,5 +1,5 @@
 ---
-baseURL: "https://sblack.rocks"
+baseURL: "https://www.sblack.rocks"
 languageCode: "en-us"
 title: "S Black (dot) Rocks"
 paginate: 100
@@ -7,8 +7,15 @@ canonifyurls: true
 theme: "minimal"
 enableGitInfo: true
 googleAnalytics: "UA-116829409-1"
+
+deployment:
+  targets:
+    name: s3
+    URL: "s3://784384215106-us-east-1-website-sblackdotrocks?region=us-east-1"
+
 permalinks:
   post: /:year/:month/:title/
+
 params:
   description: "Ramblings of Enthusiasm"
   author: "Steven Black"
