@@ -20,14 +20,8 @@ jobs:
           hugo-version: '0.74.2'
           # extended: true
 
-      - name: Build
+      - name: Build & deploy
         run: |
           cd src
           hugo --minify
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GH_DEPLOY_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./src/public
+          hugo deploy
