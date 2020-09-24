@@ -11,6 +11,7 @@ googleAnalytics: "UA-116829409-1"
 deployment:
   targets:
     name: s3
+    cloudFrontDistributionID: "E6V2C29GOA16F"
     URL: "s3://784384215106-us-east-1-website-sblackdotrocks?region=us-east-1"
 
 permalinks:
@@ -28,16 +29,13 @@ params:
   font: "Raleway" # should match the name on Google Fonts!
   highlight: true
   highlightStyle: "solarized-dark" #TODO:(sblack4) figure this out! I want dark theme <3
-  highlightLanguages: ["python", "go", "scala", "shell"]
+  highlightLanguages: ["python", "shell"]
 
 menu: 
   main:
     - url: "/"
       name: "home"
       weight: 1
-    # - url: "/about"
-    #   name: "about"
-    #   weight: 2
     - url: "/changelog"
       name: "changelog"
       weight: 3
