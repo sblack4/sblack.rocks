@@ -1,0 +1,23 @@
+on:
+  schedule:
+  - cron: '0 0 1 * *'
+  workflow_dispatch:
+
+name: Check markdown links
+jobs:
+  linkChecker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.74.2'
+          # extended: true
+          
+      - name: Link Checker
+        uses: peter-evans/link-checker@v1
