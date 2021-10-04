@@ -20,4 +20,15 @@ jobs:
           # extended: true
           
       - name: Link Checker
-        uses: peter-evans/link-checker@v1
+        uses: lycheeverse/lychee-action@v1.0.8
+        with:
+          args: --verbose --no-progress **/*.html
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        
+#       - name: Create Issue From File
+#         uses: peter-evans/create-issue-from-file@v3
+#         with:
+#           title: Link Checker Report
+#           content-filepath: ./lychee/out.md
+#           labels: report, automated issue
