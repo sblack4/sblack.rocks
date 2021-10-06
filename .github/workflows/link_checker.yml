@@ -19,10 +19,15 @@ jobs:
           hugo-version: '0.74.2'
           # extended: true
           
+      - name: Build
+        run: |
+          cd src
+          hugo --minify
+          
       - name: Link Checker
         uses: lycheeverse/lychee-action@v1.0.8
         with:
-          args: --verbose --no-progress **/*.html
+          args: --verbose --no-progress src/public/**/*.html
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         
