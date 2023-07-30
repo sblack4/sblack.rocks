@@ -6,7 +6,7 @@ paginate: 10
 canonifyurls: true
 theme: "minimal"
 enableGitInfo: true
-googleAnalytics: "UA-116829409-2"
+googleAnalytics: "G-TKBEKCXVEC"
 
 deployment:
   targets:
