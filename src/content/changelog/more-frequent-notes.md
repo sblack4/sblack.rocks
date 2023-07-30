@@ -12,3 +12,7 @@ I've started using evernote and with it discovered [Postach.io](https://postach.
 
 
 I still like having a static site on github though, I don't really need anything more. Having control over all the files and (some) control of the content serving is great so I don't plan on deleting this one... although [wagtail](https://wagtail.io/) has caught my eye as a side project for my (non-existent) free-time ;)
+
+---
+
+EDIT: I've taken down my postach stuff. :)
