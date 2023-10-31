@@ -36,9 +36,9 @@ menu:
     - url: "/"
       name: "home"
       weight: 1
-    - url: "/changelog"
-      name: "changelog"
-      weight: 3
+    # - url: "/changelog"
+    #   name: "changelog"
+    #   weight: 3
     # - url: "/projects"
     #   name: "projects"
     #   weight: 3
