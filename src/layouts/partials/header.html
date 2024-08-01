@@ -17,17 +17,9 @@
         {{ partial "css" . }} {{ partial "js" . }} {{ hugo.Generator }}
         
 
-        {{ if .Site.GoogleAnalytics }}
-        <!-- Global Site Tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)};
-          gtag('js', new Date());
-
-          gtag('config', '{{ .Site.GoogleAnalytics }}');
-        </script>
-        {{ end }}
+        <!-- Cloudflare Web Analytics -->
+        <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "41a661ab4e2e4b328cac2d7a30166e33"}'></script>
+        <!-- End Cloudflare Web Analytics -->
 
     </head>
 
